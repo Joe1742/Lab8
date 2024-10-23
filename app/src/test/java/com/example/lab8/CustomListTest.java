@@ -38,7 +38,6 @@ public class CustomListTest {
     }
 
     /**
-     * get the size of the list
      * increase the list by adding a new city
      * check if our current list contain the city that just add
      */
@@ -50,14 +49,21 @@ public class CustomListTest {
         assertTrue(list.hasCity(city));
     }
 
+    /**
+     * check there is no city in list
+     * increase the list by adding a new city
+     * check there is only one city in the list
+     * decrease the list by delete a new city
+     * check there is no city in the list
+     */
     @Test
     void testdelete(){
         list = MockCityList();
         City city = new City("Regina", "Saskatchewan");
-        assertEquals(1,list.getCount());
+        assertEquals(0,list.getCount());
         list.addCity(city);
-        assertEquals(2,list.getCount());
-        list.delete(city);
         assertEquals(1,list.getCount());
+        list.delete(city);
+        assertEquals(0,list.getCount());
     }
 }
