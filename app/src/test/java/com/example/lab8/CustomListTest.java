@@ -66,4 +66,13 @@ public class CustomListTest {
         list.delete(city);
         assertEquals(0,list.getCount());
     }
+
+    /**
+     * check there is no city in list by count city function
+     */
+    @Test
+    void testcountCities(){
+        list = MockCityList();
+        assertEquals(0, list.countCities());
+    }
 }
