@@ -37,6 +37,11 @@ public class CustomListTest {
         assertEquals(list.getCount(),listSize + 1);
     }
 
+    /**
+     * get the size of the list
+     * increase the list by adding a new city
+     * check if our current list contain the city that just add
+     */
     @Test
     void testhasCity(){
         list = MockCityList();
